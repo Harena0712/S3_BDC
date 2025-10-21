@@ -14,6 +14,19 @@
         return $result;  
     }
     
+    function table_depenses()
+    {
+        $sql ="SELECT * FROM depenses";
+        $requet = mysqli_query(dbconnect(),$sql);
+        $result = array();
+        while($depenses = mysqli_fetch_assoc($requet))
+        {
+            $result[] = $depenses;
+        }
+        mysqli_free_result($requet);
+        return $result;  
+    }
+
     function table_recettes_href()
     {
         $sql ="SELECT * FROM recettes_href";

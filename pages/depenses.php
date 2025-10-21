@@ -1,12 +1,12 @@
 <?php
     include('../inc/fonction.php');  
-    $recettes = table_recettes();
+    $depenses = table_depenses();
     $taille = 0;
-    while (isset($recettes[$taille])) 
+    while (isset($depenses[$taille])) 
     {
         $taille++;
     }
-    $recettes_href = table_recettes_href();
+    // $depenses_href = table_depenses_href();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@
                 <table  class="table table-striped table-hover text-center rounded border mt-4">
                     <thead>
                         <tr class="fw-bold">
-                            <td style="background-color: #e8f6e9ff; color: #79cb7dff">Recettes</td>
+                            <td style="background-color: #e8f6e9ff; color: #79cb7dff">Dépenses</td>
                             <td style="background-color: #e8f6e9ff; color: #79cb7dff">Totale 2024</td>
                             <td style="background-color: #e8f6e9ff; color: #79cb7dff">Totale 2025</td>
                         </tr>
@@ -38,9 +38,9 @@
                     <tbody>
                         <?php for($i = 0; $i < $taille; $i++) { ?>
                             <tr>
-                                <td><a href="<?php echo $recettes_href[$i]['href']?>.php"><?php echo $recettes[$i]['Recette']?></a></td>
-                                <td><?php echo $recettes[$i]['Totale_2024']?></td>
-                                <td><?php echo $recettes[$i]['Totale_2025']?></td>
+                                <td><a href="traitement_depenses.php?id=<?php echo $depenses[$i]['id_depenses']?>"><?php echo $depenses[$i]['Depenses']?></a></td>
+                                <td><?php echo $depenses[$i]['Totale_2024']?></td>
+                                <td><?php echo $depenses[$i]['Totale_2025']?></td>
                             </tr>
                         <?php } ?>
                     </tbody>

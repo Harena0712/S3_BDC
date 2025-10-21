@@ -12,6 +12,12 @@ create table recettes(
     Totale_2024 DECIMAL(10,2),
     Totale_2025 DECIMAL(10,2)
 );
+create table depenses(
+    id_depenses INT PRIMARY KEY AUTO_INCREMENT,
+    Depenses VARCHAR(100),
+    Totale_2024 DECIMAL(10,2),
+    Totale_2025 DECIMAL(10,2)
+);
 create table recettes_href(
     id_recettes_href INT PRIMARY KEY AUTO_INCREMENT,
     href VARCHAR(100)
@@ -87,6 +93,11 @@ INSERT INTO recettes (Recette, Totale_2024, Totale_2025) VALUES
 ('Recettes douanières', 3768.0, 4366.0),
 ('Recettes non fiscales', 345.8, 491.7),
 ('Don', 1086.3, 2476.6);
+
+-- Table depenses
+INSERT INTO depenses (Depenses, Totale_2024, Totale_2025) VALUES 
+('Ventilation des dépenses par rubrique', 3768.0, 4366.0),
+('Répartition du budget par rattachement administratif', 12782.4, 16304.9);
 
 -- Table recettes_href
 INSERT INTO recettes_href (href) VALUES 
