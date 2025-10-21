@@ -7,7 +7,7 @@
 </head>
 <body>
     <header class="mb-4">
-        <nav class="bg-light shadow row p-2">
+        <nav class="header shadow row p-2">
             <div class="col-md-1">
                 <div class="logo">BDC</div>
             </div>

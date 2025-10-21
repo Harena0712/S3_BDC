@@ -6,6 +6,9 @@ a{
     color: black;
 }
 /* header */
+.header{
+    background-color: #232323;
+}
 .logo{
     background: linear-gradient(90deg, #134e4a, #16a34a);
     margin-left: 20%;
@@ -23,10 +26,16 @@ a{
     justify-content: end;
     gap: 20px;
 }
+.li_hover a {
+    color: white;
+}
 .li_hover:hover {
     border-radius: 16px;
     background: #c5ffc8;
     border-bottom: 5px solid #16a34a;
+}
+.li_hover:hover a{
+    color: rgb(0, 0, 0);
 }
 li{
     list-style: none; 

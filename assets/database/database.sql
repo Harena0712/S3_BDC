@@ -18,6 +18,24 @@ create table depenses(
     Totale_2024 DECIMAL(10,2),
     Totale_2025 DECIMAL(10,2)
 );
+create table depenses1(
+    id_depenses1 INT PRIMARY KEY AUTO_INCREMENT,
+    Titre VARCHAR(100),
+    Totale_2024 DECIMAL(10,2),
+    Totale_2025 DECIMAL(10,2)
+);
+create table depenses2(
+    id_depenses2 INT PRIMARY KEY AUTO_INCREMENT,
+    Titre VARCHAR(100),
+    Totale_2024 DECIMAL(10,2),
+    Totale_2025 DECIMAL(10,2),
+    Ecart VARCHAR(100)
+);
+create table depenses3(
+    id_depenses3 INT PRIMARY KEY AUTO_INCREMENT,
+    Titre VARCHAR(100),
+    Totale INT
+);
 create table recettes_href(
     id_recettes_href INT PRIMARY KEY AUTO_INCREMENT,
     href VARCHAR(100)
@@ -98,6 +116,19 @@ INSERT INTO recettes (Recette, Totale_2024, Totale_2025) VALUES
 INSERT INTO depenses (Depenses, Totale_2024, Totale_2025) VALUES 
 ('Ventilation des dépenses par rubrique', 3768.0, 4366.0),
 ('Répartition du budget par rattachement administratif', 12782.4, 16304.9);
+
+-- Table depenses1
+INSERT INTO depenses1 (Titre, Totale_2024, Totale_2025) VALUES 
+('Ventilation des dépenses par rubrique', 3768.0, 4366.0);
+
+-- Table depenses2
+INSERT INTO depenses2 (Titre, Totale_2024, Totale_2025, Ecart) VALUES 
+('Ventilation des dépenses par rubrique',  3814.5, 3846.4, 31.9),
+('Récapitulatif des dépenses de fonctionnement',  3069.0, 2304.3 ,-764.7);
+
+-- Table depenses3
+INSERT INTO depenses3 (Titre, Totale) VALUES 
+('Poste budgetaires autorisées pour 2025',  6650);
 
 -- Table recettes_href
 INSERT INTO recettes_href (href) VALUES 
@@ -217,10 +248,10 @@ INSERT INTO tableau8b (Titre, prix) VALUES
 ('Ministère des Forces Armées', 1000),
 ('Ministère de la Santé Publique', 300),
 ('Ministère de la Sécurité Publique', 1000),
-('Ministère de l’Éducation Nationale', 3000),
-('Ministère de l’Enseignement Technique
+('Ministère de l Éducation Nationale', 3000),
+('Ministère de l Enseignement Technique
 et de la Formation Professionnelle', 250),
-('Ministère de l’Enseignement Supérieur
+('Ministère de l Enseignement Supérieur
 et de le Recherche Scientifique', 100),
 ('Ministère délégué en charge de la
 Gendarmerie Nationale', 1000);
