@@ -44,3 +44,12 @@ li{
     margin-top: 6%;
     background-color: white;
 }
+.titre_depense_rubrique{
+    width: 80%;
+    margin-left: 10%;
+    background-color: #7ccb79;
+    border: 3px solid #4aa150;
+}
+.contait_table_depense_rubrique{
+    background-color: white;
+}

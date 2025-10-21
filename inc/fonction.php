@@ -163,4 +163,61 @@
         mysqli_free_result($requet);
         return $result;  
     }
+    
+    function table_depenses_rubrique()
+    {
+        $sql ="SELECT * FROM tableau7";
+        $requet = mysqli_query(dbconnect(),$sql);
+        $result = array();
+        while($recettes_fiscales = mysqli_fetch_assoc($requet))
+        {
+            $result[] = $recettes_fiscales;
+        }
+        mysqli_free_result($requet);
+        return $result;  
+    }
+    
+    function totale_depenses_rubrique()
+    {
+        $sql ="SELECT * FROM tableau7";
+        $requet = mysqli_query(dbconnect(),$sql);
+        $avant = 0;
+        $apres = 0;
+        $result = array();
+        while($recettes_fiscales = mysqli_fetch_assoc($requet))
+        {
+            $avant = $avant + $recettes_fiscales['avant'];
+            $apres = $apres + $recettes_fiscales['apres'];
+        }
+        $result[0] = $avant;
+        $result[1] = $apres;
+        mysqli_free_result($requet);
+        return $result;  
+    }
+
+    function table_tab8b()
+    {
+        $sql ="SELECT * FROM tableau8b";
+        $requet = mysqli_query(dbconnect(),$sql);
+        $result = array();
+        while($recettes_fiscales = mysqli_fetch_assoc($requet))
+        {
+            $result[] = $recettes_fiscales;
+        }
+        mysqli_free_result($requet);
+        return $result;  
+    }
+    
+    function totale_tab8b()
+    {
+        $sql ="SELECT * FROM tableau8b";
+        $requet = mysqli_query(dbconnect(),$sql);
+        $result = 0;
+        while($tableau8b = mysqli_fetch_assoc($requet))
+        {
+            $result = $result + $tableau8b['prix'];
+        }
+        mysqli_free_result($requet);
+        return $result;  
+    }
 ?>
