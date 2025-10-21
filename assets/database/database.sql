@@ -58,6 +58,10 @@ create table tableau8(
     apres DECIMAL(10,2),
     Ecart DECIMAL(10,2)
 );
+create table tableau8b(
+    Titre VARCHAR(100),
+    prix INT
+);
 create table tableau9(
     Nom VARCHAR(100),
     avant DECIMAL(10,2),
@@ -196,6 +200,19 @@ INSERT INTO tableau8 (Nom, avant, apres, Ecart) VALUES
 ('Solde/PIB Nominal', 4.8, 4.3, -0.5),
 ('Solde/Recettes fiscales nettes', 47.9, 40.5, -7.4),
 ('Solde/Dépenses totales', 29.9, 23.6, -6.3);
+
+-- Table 8b
+INSERT INTO tableau8b (Titre, prix) VALUES
+('Ministère des Forces Armées', 1000),
+('Ministère de la Santé Publique', 300),
+('Ministère de la Sécurité Publique', 1000),
+('Ministère de l’Éducation Nationale', 3000),
+('Ministère de l’Enseignement Technique
+et de la Formation Professionnelle', 250),
+('Ministère de l’Enseignement Supérieur
+et de le Recherche Scientifique', 100),
+('Ministère délégué en charge de la
+Gendarmerie Nationale', 1000);
 
 -- Table 9
 INSERT INTO tableau9 (Nom, avant, apres, Ecart) VALUES

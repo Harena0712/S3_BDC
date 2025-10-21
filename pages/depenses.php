@@ -22,7 +22,7 @@
     <main class="m-4 p-4">
         <div class="p-4">
             <div class="titre_recette shadow rounded">
-                <h1 class="text-center p-3 text-white">DEFICIT</h1>
+                <h1 class="text-center p-3 text-white">DEPENSES</h1>
             </div>
 
             <div class="container contait_table_recette p-5 rounded shadow mb-4" style="font-size:20px;">
