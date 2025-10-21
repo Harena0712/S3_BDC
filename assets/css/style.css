@@ -1,0 +1,46 @@
+body{
+    background-color: #e9f6e8; 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* header */
+.logo{
+    background: linear-gradient(90deg, #134e4a, #16a34a);
+    margin-left: 20%;
+    box-shadow:0 7px 8px rgb(0 0 0 / 53%);
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    border-radius: 40px;
+    color: white;
+}
+.menu_horizontal {
+    /* font-size: 12px; */
+    list-style: none; 
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+.li_hover:hover {
+    border-radius: 16px;
+    background: #c5ffc8;
+    border-bottom: 5px solid #16a34a;
+}
+li{
+    list-style: none; 
+}
+/* recettes */
+.titre_recette{
+    margin-top: 1%;
+    position: absolute;
+    width: 60%;
+    margin-left: 15%;
+    background-color: #7ccb79;
+    border: 3px solid #4aa150;
+}
+.contait_table_recette{
+    margin-top: 6%;
+    background-color: white;
+}
