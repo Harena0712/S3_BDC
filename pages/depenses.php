@@ -6,7 +6,6 @@
     {
         $taille++;
     }
-    // $depenses_href = table_depenses_href();
 ?>
 <!DOCTYPE html>
 <html lang="en">

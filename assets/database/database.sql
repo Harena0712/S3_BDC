@@ -31,6 +31,13 @@ create table depenses2(
     Totale_2025 DECIMAL(10,2),
     Ecart VARCHAR(100)
 );
+create table depenses_tab9(
+    id_depenses_tab9 INT PRIMARY KEY AUTO_INCREMENT,
+    Titre VARCHAR(100),
+    Totale_2024 DECIMAL(10,2),
+    Totale_2025 DECIMAL(10,2),
+    Ecart DECIMAL(10,2)
+);
 create table depenses3(
     id_depenses3 INT PRIMARY KEY AUTO_INCREMENT,
     Titre VARCHAR(100),
@@ -77,6 +84,7 @@ create table tableau7(
     apres DECIMAL(10,2)
 );
 create table tableau8(
+    id_tab8 INT PRIMARY KEY AUTO_INCREMENT,
     Nom VARCHAR(100),
     avant DECIMAL(10,2),
     apres DECIMAL(10,2),
@@ -93,9 +101,20 @@ create table tableau9(
     Ecart VARCHAR(100)
 );
 create table tableau10(
+    id_tab10 INT PRIMARY KEY AUTO_INCREMENT,
     Nom VARCHAR(100),
     avant DECIMAL(10,2),
     apres DECIMAL(10,2)
+);
+create table Situ_deficit(
+    id_Situ_deficit INT PRIMARY KEY AUTO_INCREMENT,
+    Nom VARCHAR(100),
+    valeur DECIMAL(10,2)
+);
+create table financ_deficit(
+    id_financ_deficit INT PRIMARY KEY AUTO_INCREMENT,
+    Nom VARCHAR(100),
+    valeur DECIMAL(10,2)
 );
 
 -- Table bdc
@@ -129,6 +148,10 @@ INSERT INTO depenses2 (Titre, Totale_2024, Totale_2025, Ecart) VALUES
 -- Table depenses3
 INSERT INTO depenses3 (Titre, Totale) VALUES 
 ('Poste budgetaires autorisées pour 2025',  6650);
+
+-- Table depenses_tab9
+INSERT INTO depenses_tab9 (Titre, Totale_2024, Totale_2025, Ecart) VALUES 
+('Récapitulatif des dépenses de fonctionnement',  3069.0, 2304.3, -764.7);
 
 -- Table recettes_href
 INSERT INTO recettes_href (href) VALUES 
@@ -308,3 +331,15 @@ INSERT INTO tableau10 (Nom, avant, apres) VALUES
 ('Total « Organes Constitutionnels »', 4.2, 4.0),
 ('Haute Cour de Justice', 3.7, 3.5),
 ('Total Hors « Opérations d ordre »', 11403.8, 14416.4);
+
+-- Table Situ_deficit
+INSERT INTO Situ_deficit (Nom, valeur) VALUES
+('RECETTES TOTALES ET DONS', 12962.7),
+('DÉFICIT', 3642.2),
+('DÉPENSES TOTALES', 16304.9);
+
+-- Table financ_deficit
+INSERT INTO financ_deficit (Nom, valeur) VALUES
+('DÉFICIT BUDGÉTAIRE', 3642.2),
+('FINANCEMENT EXTÉRIEUR', 3147.6),
+('FINANCEMENT INTÉRIEUR', 494.6);
