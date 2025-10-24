@@ -1,6 +1,30 @@
 <?php
     include('connecxon.php');  
     
+    
+    function table_prevision_macroeconomique(){
+       $sql ="SELECT * FROM tableau1";
+        $requet = mysqli_query(dbconnect(),$sql);
+        $result = array();
+        while($recettes_fiscales = mysqli_fetch_assoc($requet))
+        {
+            $result[] = $recettes_fiscales;
+        }
+        mysqli_free_result($requet);
+        return $result;  
+    }
+    
+    function table_taux_de_croissance_sectorielle(){
+        $sql="SELECT * FROM tableau2";
+        $request = mysqli_query(dbconnect(),$sql);
+        $result = array();
+        while($valiny = mysqli_fetch_assoc($request))
+        {
+            $result[] = $valiny; 
+        }
+        mysqli_free_result($request);
+        return $result;
+    }
     function table_recettes()
     {
         $sql ="SELECT * FROM recettes";

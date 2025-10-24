@@ -40,6 +40,36 @@ a{
 li{
     list-style: none; 
 }
+
+.bordure_blue {
+    border-radius: 10px;
+    border: 4px solid rgb(18, 166, 220);
+}
+.bordure_blue:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.482);
+}
+.bordure_yellow {
+    border-radius: 10px;
+    border: 4px solid rgb(251, 251, 8);
+}
+.bordure_yellow:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.482);
+}
+.bordure_red {
+    border-radius: 10px;
+    border: 4px solid rgb(230, 19, 3);
+}
+.bordure_red:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.482);
+}
+.bordure_green {
+    border-radius: 10px;
+    border: 4px solid rgb(25, 162, 10);
+}
+.bordure_green:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.482);
+}
+
 /* recettes */
 .titre_recette{
     margin-top: 1%;
